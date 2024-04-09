@@ -1,0 +1,179 @@
+/* Add some basic styles for the gallery and items */
+body {
+        height: 100%;
+        width: 100%;
+        background-color: #000814;
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between items as needed */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+background: #504F4F;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.cir {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 493px;
+    background: #FFF;
+    filter: blur(150px);
+}
+
+.cir1 {
+    width: 356px;
+    height: 342px;
+    flex-shrink: 0;
+    border-radius: 356px;
+    background: #FFC93F;
+    filter: blur(250px);
+    float: right;
+    margin-top: -150px;
+    z-index: -1;
+}
+
+.cir2 {
+    width: 356px;
+    height: 342px;
+    flex-shrink: 0;
+    border-radius: 356px;
+    background: #FD61BE;
+    filter: blur(250px);
+    float: right;
+    margin-top: -150px;
+}
+  
+  p:hover {
+    cursor: default;
+  }
+  
+  .grid-container {
+    border: solid 1px #eeeeee; /*for debugging display */
+    padding: 0.5vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 24.5vw;
+    grid-gap: 0.5vw;
+    width: 900px;
+    margin-top: -100px;
+  }
+  
+  .griditem {
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    padding: 2vw;
+    font-size: 0.8em;
+    box-sizing: border-box;
+  }
+  .griditem:hover {
+    cursor: pointer;
+    filter: brightness(70%) grayscale(100%);
+  }
+  /* set background images*/
+  .image1 {
+    background-position: left center;
+    background-image: url("https://drive.google.com/uc?export=view&id=1w6uHLIlwvF0f32u9hbA7pt2C6BTlOP0J");
+    /*grid-area: image1;*/
+  }
+  .image2 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1VenPnthyvrowUHQppUJ4ECkTDstt6KBG");
+    /*grid-area: image2;*/
+  }
+  .image3 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1bH0S3RWoO_g78Q18O0wRMZ9DXhVEBzKe");
+    /*grid-area: image3;*/
+  }
+  .image4 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1nN2VE5A5yLV79qhg8WoPBxELBE7JsDBr");
+    /*grid-area: image4;*/
+  }
+  .image5 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1RDal1IPU8_hUJ2bDfSZQymxESHHulKUK");
+  }
+  .image6 {
+    background-image: url("https://drive.google.com/uc?export=view&id=17i4_JZPFdje_iC_QlsmhI7d0kArDs9NA");
+  }
+  .image7 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1MSx-X9Rl2ndhiYv0Mf6y6ayGOuROuzva");
+  }
+  .image8 {
+    background-image: url("https://drive.google.com/uc?export=view&id=1cuEqBt8IszjvuvYls9xGwTeHH6k1hYrX");
+  }
+  
+  /*full image modal */
+  .modal {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* below covers window area*/
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff; /* set window back ground color */
+  }
+  .modal-content {
+    display: block;
+  }
+  .modal-btn {
+    color: red;
+    padding: 4px 8px;
+    position: absolute;
+    right: 10vw;
+    top: 1vh;
+  }
+  .modal-btn:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+  .animate-zoom {
+    animation: animatezoom 0.8s;
+  }
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .topright {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .mod-img {
+    /* rsponsive display full image within in view area */
+    object-fit: scale-down;
+    display: block;
+    max-height: 99vh;
+    max-width: 99vw;
+    margin: 0.5vh auto;
+  }
+  mod-img:hover {
+  }
+  

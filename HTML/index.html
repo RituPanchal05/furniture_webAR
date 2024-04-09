@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Furnitures</title>
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- scripts -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="cir"></div>
+    <div class="glass">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="site-identity">
+                <h1>3DFURNIX</h1>
+            </div>
+            <nav class="site-navigation">
+                <ul class="nav">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40" fill="none">
+                    <path
+                        d="M8.33333 36.6667H31.6667C32.5507 36.6667 33.3986 36.3155 34.0237 35.6904C34.6488 35.0652 35 34.2174 35 33.3333V15C35 14.558 34.8244 14.1341 34.5118 13.8215C34.1993 13.5089 33.7754 13.3333 33.3333 13.3333H28.3333V12.0383C28.3333 7.69 25.1617 3.79667 20.8333 3.375C19.6748 3.25986 18.505 3.38851 17.3991 3.75267C16.2933 4.11684 15.276 4.70845 14.4125 5.48946C13.5491 6.27047 12.8587 7.22357 12.3858 8.28745C11.9129 9.35133 11.6679 10.5024 11.6667 11.6667V13.3333H6.66667C6.22464 13.3333 5.80072 13.5089 5.48816 13.8215C5.17559 14.1341 5 14.558 5 15V33.3333C5 34.2174 5.35119 35.0652 5.97631 35.6904C6.60143 36.3155 7.44928 36.6667 8.33333 36.6667ZM28.3333 16.6667V20H25V16.6667H28.3333ZM15 11.6667C15 8.91 17.2433 6.66667 20 6.66667C22.7567 6.66667 25 8.91 25 11.6667V13.3333H15V11.6667ZM11.6667 16.6667H15V20H11.6667V16.6667Z"
+                        fill="#FF40B2" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 35 35" fill="none">
+                    <g clip-path="url(#clip0_14_14)">
+                        <path
+                            d="M17.08 0C26.9798 0 35 7.83475 35 17.5C35 27.1652 26.978 35 17.08 35C11.4958 35 6.3315 32.4852 2.9575 28.2695C2.86292 28.1518 2.79297 28.0162 2.7518 27.8709C2.71064 27.7256 2.6991 27.5735 2.71787 27.4236C2.73664 27.2738 2.78535 27.1292 2.86108 26.9986C2.93682 26.8679 3.03805 26.7538 3.15875 26.663C3.40488 26.4757 3.71426 26.3917 4.02132 26.4286C4.32838 26.4655 4.60901 26.6205 4.80375 26.8607C6.27975 28.6951 8.14991 30.1736 10.2754 31.1864C12.401 32.1991 14.7273 32.7202 17.0817 32.711C25.683 32.711 32.6567 25.9 32.6567 17.5C32.6567 9.1 25.683 2.289 17.0817 2.289C14.7609 2.28008 12.467 2.7864 10.3656 3.77145C8.26415 4.7565 6.40756 6.19571 4.92975 7.98525C4.73193 8.22333 4.44912 8.37495 4.14135 8.40795C3.83357 8.44095 3.52505 8.35273 3.28125 8.162C3.16159 8.06965 3.06174 7.95417 2.98762 7.82244C2.9135 7.69071 2.86664 7.54542 2.84983 7.39521C2.83301 7.245 2.84658 7.09294 2.88973 6.94808C2.93288 6.80322 3.00473 6.66852 3.101 6.552C6.48025 2.4395 11.5745 0 17.08 0ZM18.0338 12.0085L22.771 16.7458C23.2295 17.2043 23.2382 17.9358 22.7902 18.3838L18.165 23.0125C18.0561 23.119 17.9273 23.203 17.786 23.2597C17.6446 23.3164 17.4934 23.3447 17.3411 23.3429C17.1888 23.3411 17.0384 23.3093 16.8984 23.2493C16.7584 23.1893 16.6316 23.1023 16.5252 22.9932C16.4163 22.8868 16.3294 22.7599 16.2696 22.6199C16.2097 22.4798 16.1781 22.3293 16.1765 22.177C16.1748 22.0247 16.2033 21.8736 16.2601 21.7323C16.317 21.591 16.4011 21.4622 16.5077 21.3535L19.215 18.6445L1.1725 18.6462C1.02022 18.6481 0.86906 18.6199 0.727683 18.5633C0.586305 18.5067 0.45748 18.4227 0.348579 18.3162C0.239677 18.2098 0.152835 18.0829 0.0930223 17.9428C0.0332094 17.8028 0.00159916 17.6523 0 17.5C0 16.8682 0.525 16.3555 1.1725 16.3555H19.1415L16.415 13.6273C16.3061 13.5208 16.2192 13.3939 16.1593 13.2539C16.0995 13.1138 16.0678 12.9633 16.0662 12.811C16.0646 12.6587 16.093 12.5076 16.1499 12.3663C16.2067 12.225 16.2909 12.0962 16.3975 11.9875C16.6172 11.7734 16.9129 11.6552 17.2196 11.6588C17.5263 11.6624 17.8191 11.7893 18.0338 12.0085Z"
+                            fill="#FF40B2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_14_14">
+                            <rect width="35" height="35" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40" fill="none">
+                    <path
+                        d="M26.6667 16.6667C26.6667 18.4348 25.9643 20.1305 24.7141 21.3807C23.4638 22.631 21.7682 23.3333 20 23.3333C18.2319 23.3333 16.5362 22.631 15.286 21.3807C14.0358 20.1305 13.3334 18.4348 13.3334 16.6667C13.3334 14.8986 14.0358 13.2029 15.286 11.9526C16.5362 10.7024 18.2319 10 20 10C21.7682 10 23.4638 10.7024 24.7141 11.9526C25.9643 13.2029 26.6667 14.8986 26.6667 16.6667Z"
+                        fill="#FF40B2" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.32 36.6534C10.4308 36.2967 3.33334 28.9767 3.33334 20C3.33334 10.795 10.795 3.33337 20 3.33337C29.205 3.33337 36.6667 10.795 36.6667 20C36.6667 29.205 29.205 36.6667 20 36.6667C19.9239 36.6672 19.8478 36.6672 19.7717 36.6667C19.6208 36.6667 19.47 36.6617 19.32 36.6534ZM9.30501 30.5167C9.1804 30.1588 9.13798 29.7775 9.18091 29.401C9.22384 29.0245 9.35101 28.6625 9.55299 28.3419C9.75497 28.0213 10.0266 27.7503 10.3476 27.549C10.6687 27.3477 11.0309 27.2213 11.4075 27.1792C17.9042 26.46 22.1358 26.525 28.6008 27.1942C28.9779 27.2335 29.3411 27.3583 29.6627 27.5591C29.9842 27.7599 30.2557 28.0315 30.4565 28.3531C30.6572 28.6747 30.7819 29.0379 30.8211 29.415C30.8603 29.7921 30.8129 30.1732 30.6825 30.5292C33.4533 27.7258 35.005 23.9417 35 20C35 11.7159 28.2842 5.00004 20 5.00004C11.7158 5.00004 5.00001 11.7159 5.00001 20C5.00001 24.0967 6.64251 27.81 9.30501 30.5167Z"
+                        fill="#FF40B2" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- TEXT AND SOFA -->
+
+        <div class="main">
+            <div class="maint">
+                <span class="gradient" style="font-size: 70px; color: white;">TRANSFORM TO</span><br>
+                <span class="gradient" style="font-size: 70px;display: block; margin-top: -20px; color: white;">YOUR
+                    SPACE</span>
+                <div>
+                    <span
+                        style="display: inline-block; font-size: 20px; font-family: sans-serif;letter-spacing: normal;word-spacing: normal;  color: #FF40B2; margin-left: 10px;">Discover
+                        furniture and experience unbelivable 3D view.</span>
+                </div>
+            </div>
+            <div class="cir1"></div>
+            <div class="cir1"></div>
+            <div class="cir2"></div>
+            <model-viewer class="sofa" src="../assets/branagh_3_seater_chesterfield_sofa_green_velvet/scene.gltf"
+                camera-controls alt="cube" auto-rotate shadow-intensity="3"></model-viewer>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="background">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 224" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1520.04 5.82401L1478.31 15.7639C1435.32 25.7208 1351.87 45.6005 1266.83 42.0534C1181.8 38.5063 1097.72 11.4982 1012.62 3.26225C927.525 -4.97367 843.948 5.52851 759.419 39.4916C674.889 73.4548 591.943 130.845 506.909 127.298C421.875 123.751 337.291 59.2322 252.257 55.685C167.223 52.1379 84.277 109.528 41.5355 138.24L0.0623062 166.935L0.818277 223.2L42.6695 222.638C85.7889 222.059 169.491 220.934 254.462 219.792C339.433 218.651 423.135 217.526 508.106 216.385C593.076 215.243 676.779 214.118 761.75 212.977C846.72 211.835 930.423 210.71 1015.39 209.569C1100.36 208.427 1184.07 207.302 1269.04 206.161C1354.01 205.019 1437.71 203.895 1480.83 203.315L1522.68 202.753L1520.04 5.82401Z"
+                    fill="#172336" />
+            </svg>
+            <div class="bluebox">
+                <p>Ultramodel Collections Of Furnitures</p>
+                <div class="line"></div>
+                <div class="selection">
+                    <nav>
+                        <ul>
+                            <li style="background-color: #Fff; border-radius: 30px; color: #FF40B2;" onclick="sofa_chair()">Sofa Chair</li>
+                            <li onclick="chair()">Chair</li>
+                            <li onclick="sofa()">Sofa</li>
+                            <li onclick="cabinet()">Cabinet</li>
+                            <li onclick="bed()">Bed</li>
+                            <li onclick="swing()">Wooden Swing</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cir1" id="innercir1"></div>
+                <div class="cir2" id="innercir2"></div>
+
+                <div class="mainframe">
+                    <div id="nav_sofa_chair">
+                        <div class="pdtrow">
+    
+                            <div class="model">
+                                <model-viewer class="sofa_chair viewer" id="main_sofa_chair" src="../assets/first_red_sofa_chair.glb"
+                                    camera-controls alt="cube" auto-rotate shadow-intensity="3" style="display: none;" disable-tap camera-orbit="90deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_red_sofa_chair"
+                                    src="../assets/first_flower_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-50deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_blue_sofa_chair"
+                                    src="../assets/first_parrot_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-50deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_pink_sofa_chair"
+                                    src="../assets/second_pink.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_yellow_sofa_chair"
+                                    src="../assets/sofa_one/scene.gltf" camera-controls alt="cube" shadow-intensity="3"
+                                    disable-tap camera-orbit="-120deg 80deg" disable-zoom disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_brown_sofa_chair"
+                                    src="../assets/second_red.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom></model-viewer>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_lightpink_sofa_chair"
+                                    src="../assets/besame_chair_hp.glb" auto-rotate camera-controls alt="cube"
+                                    shadow-intensity="3" style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_lightblue_sofa_chair"
+                                    src="../assets/new_third_lightblue.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_peacock_sofa_chair"
+                                    src="../assets/new_third_peacock.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_darkpink_sofa_chair"
+                                    src="../assets/forth_pink_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_grey_sofa_chair"
+                                    src="../assets/forth_gray_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_green_sofa_chair"
+                                    src="../assets/forth_green_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_black1_sofa_chair"
+                                    src="../assets/fifth_black.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="250deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_yellow1_sofa_chair"
+                                    src="../assets/fifth_yellow.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                            </div>
+                            <div id="ff_one">
+                                <div class="pdtinfo">
+                                    <p class="name">Sofa Chair</p>
+                                    <p class="price">$150</p>
+                                    <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tenetur amet quis
+                                        ea
+                                        iusto facere quasi odio, enim, voluptatem ipsum cumque illum provident exercitationem error.
+                                        Illum amet minima voluptatum officiis.</p>
+                                </div>
+                            </div>
+                            <div id="ff_second">
+                                <div class="pdtinfo">
+                                    <p class="name">Sofa Chair</p>
+                                    <p class="price">$130</p>
+                                    <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tenetur amet quis
+                                        ea
+                                        iusto facere quasi odio, enim, voluptatem ipsum cumque illum provident exercitationem error.
+                                        Illum amet minima voluptatum officiis.</p>
+                                </div>
+                            </div>
+                            
+                            <model-viewer class="lamp" src="../assets/lamp.glb" camera-controls camera-orbit="90deg 75deg"
+                                disable-tap alt="cube" shadow-intensity="3" disable-tap disable-zoom></model-viewer>
+                            <div class="lcir1"></div>
+                        </div>
+        
+        
+                        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1000"
+                            data-aos-duration="1000" style="display: inline-block;">
+                            <div id="slider">
+                                <div class="slider_container">
+                                    <div class="container">
+                                        <div class="swiper box_slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ FIRST SOFA CHAIR ------- -->
+                                                                        <model-viewer class="red_sofa_chair" id="red_sofa_chair"
+                                                                            src="../assets/first_flower_sofa_chair.glb" camera-orbit="-50deg" camera-controls
+                                                                            alt="cube" shadow-intensity="3" disable-tap disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="red_sofa_chair"
+                                                                            id="blue_sofa_chair"
+                                                                            src="../assets/first_parrot_sofa_chair.glb" camera-orbit="-50deg" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;">
+                                                                        </model-viewer>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <!-- <img src="../IMAGES/red_sofa_chair.png" alt="" height="200" width="200"> -->
+                                                                    <img src="../IMAGES/second_pink.jpg" alt="" height="250"
+                                                                        width="250" style="margin-left: 25px; margin-top: 25px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- colors -->
+                                                    <div id="first">
+                                                        <div id="fblue" class="first_sofa_chair  bluesofa"></div>
+                                                        <div id="fgray" class="first_sofa_chair redsofa"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ SECOND SOFA CHAIR ------- -->
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_pink_sofa_chair"
+                                                                            src="../assets/second_pink.glb" 
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_yellow_sofa_chair"
+                                                                            src="../assets/sofa_one/scene.gltf" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_brown_sofa_chair"
+                                                                            src="../assets/second_red.glb" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <img src="../IMAGES/default-trigger.jpg" alt="" height="250"
+                                                                        width="250" style="margin-left: 25px; margin-top: 25px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="second" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  pinksofa"
+                                                            style="background-color: palevioletred;"></div>
+                                                        <div class="first_sofa_chair yellowsofa"
+                                                            style="background-color: #b1a74d;"></div>
+                                                        <div class="first_sofa_chair brownsofa"
+                                                            style="background-color: brown;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                         <!-- ------ THIRD SOFA CHAIR ------- -->
+        
+        
+                                                                         <model-viewer class="third_sofa_chair"
+                                                                         id="third_lightpink_sofa_chair"
+                                                                         src="../assets/besame_chair_hp.glb" 
+                                                                         camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                     <model-viewer class="third_sofa_chair"
+                                                                         id="third_lightblue_sofa_chair"
+                                                                         src="../assets/new_third_lightblue.glb"
+                                                                         camera-controls alt="cube" shadow-intensity="3"
+                                                                         style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                     <model-viewer class="third_sofa_chair"
+                                                                         id="third_peacock_sofa_chair"
+                                                                         src="../assets/new_third_peacock.glb"
+                                                                         camera-controls alt="cube" shadow-intensity="3"
+                                                                         style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <img src="../IMAGES/default-trigger (1).jpg" alt="" height="250"
+                                                                        width="250" style="margin-left: 25px; margin-top: 25px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <!-- colors -->
+                                                    <div id="third" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  lightpinksofa"
+                                                            style="background-color: rgb(245, 137, 173);">
+                                                        </div>
+                                                        <div class="first_sofa_chair lightbluesofa"
+                                                            style="background-color: #19d0dd;"></div>
+                                                        <div class="first_sofa_chair peacocksofa"
+                                                            style="background-color: rgb(1, 117, 133);"></div>
+                                                    </div>
+        
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                       
+                                                                        <!-- ------ FORTH SOFA CHAIR ------- -->
+                                                                        
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_darkpink_sofa_chair"
+                                                                            src="../assets/forth_pink_sofa_chair.glb" 
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_grey_sofa_chair"
+                                                                            src="../assets/forth_gray_sofa_chair.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_green_sofa_chair"
+                                                                            src="../assets/forth_green_sofa_chair.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <img src="../IMAGES/default-trigger (2).jpg" alt="" height="250"
+                                                                        width="250" style="margin-left: 25px; margin-top: 25px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="forth" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  darkpinksofa"
+                                                            style="background-color: rgb(255, 3, 104);">
+                                                        </div>
+                                                        <div class="first_sofa_chair grey"
+                                                            style="background-color: #575757;"></div>
+                                                        <div class="first_sofa_chair green"
+                                                            style="background-color: rgb(5, 255, 97);"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ FIFFTH SOFA CHAIR ------- -->
+                                                                        
+                                                                        <model-viewer class="fifth_sofa_chair"
+                                                                            id="fifth_black_sofa_chair"
+                                                                            src="../assets/fifth_black.glb" 
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="fifth_sofa_chair"
+                                                                            id="fifth_yello_sofa_chair"
+                                                                            src="../assets/fifth_yellow.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <img src="../IMAGES/fifth.jpg" alt="" height="250"
+                                                                        width="250" style="margin-left: 25px; margin-top: 25px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="fifth" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  black"
+                                                            style="background-color: rgb(0, 0, 0);">
+                                                        </div>
+                                                        <div class="first_sofa_chair yellow"
+                                                            style="background-color: #d3dd19;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <!-- <div class="swiper-pagination"></div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 2nd -->
+                   
+
+                    <!-- 3rd -->
+                    <div id="nav_sofa">
+                        <div class="pdtrow">
+    
+                            <div class="model">
+                                <model-viewer class="sofa_chair viewer" id="main_sofa_chair" src="../assets/first_red_sofa_chair.glb"
+                                    camera-controls alt="cube" auto-rotate shadow-intensity="3" style="display: none;" disable-tap camera-orbit="90deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_red_sofa_chair"
+                                    src="../assets/first_flower_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="120deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_blue_sofa_chair"
+                                    src="../assets/first_parrot_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_pink_sofa_chair"
+                                    src="../assets/second_pink.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_yellow_sofa_chair"
+                                    src="../assets/sofa_one/scene.gltf" camera-controls alt="cube" shadow-intensity="3"
+                                    disable-tap camera-orbit="-120deg 80deg" disable-zoom disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_brown_sofa_chair"
+                                    src="../assets/second_red.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom></model-viewer>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_lightpink_sofa_chair"
+                                    src="../assets/besame_chair_hp.glb" auto-rotate camera-controls alt="cube"
+                                    shadow-intensity="3" style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_lightblue_sofa_chair"
+                                    src="../assets/new_third_lightblue.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_peacock_sofa_chair"
+                                    src="../assets/new_third_peacock.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_darkpink_sofa_chair"
+                                    src="../assets/forth_pink_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_grey_sofa_chair"
+                                    src="../assets/forth_gray_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_green_sofa_chair"
+                                    src="../assets/forth_green_sofa_chair.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_black1_sofa_chair"
+                                    src="../assets/fifth_black.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                                <model-viewer class="sofa_chair viewer" id="main_yellow1_sofa_chair"
+                                    src="../assets/fifth_yellow.glb" camera-controls alt="cube" shadow-intensity="3"
+                                    style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                </model-viewer>
+                            </div>
+                            <div class="pdtinfo">
+                                <p class="name">Sofa</p>
+                                <p class="price">$120</p>
+                                <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tenetur amet quis
+                                    ea
+                                    iusto facere quasi odio, enim, voluptatem ipsum cumque illum provident exercitationem error.
+                                    Illum amet minima voluptatum officiis.</p>
+                            </div>
+                            
+                            <model-viewer class="lamp" src="../assets/lamp.glb" camera-controls camera-orbit="90deg 75deg"
+                                disable-tap alt="cube" shadow-intensity="3" disable-tap disable-zoom></model-viewer>
+                            <div class="lcir1"></div>
+                        </div>
+        
+        
+                        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1000"
+                            data-aos-duration="1000" style="display: inline-block;">
+                            <div id="slider">
+                                <div class="slider_container">
+                                    <div class="container">
+                                        <div class="swiper box_slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ FIRST SOFA CHAIR ------- -->
+                                                                        <model-viewer class="red_sofa_chair" id="red_sofa_chair"
+                                                                            src="../assets/first_flower_sofa_chair.glb" camera-controls
+                                                                            alt="cube" shadow-intensity="3">
+                                                                        </model-viewer>
+                                                                        <model-viewer class="red_sofa_chair"
+                                                                            id="blue_sofa_chair"
+                                                                            src="../assets/first_parrot_sofa_chair.glb" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;">
+                                                                        </model-viewer>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    <!-- <img src="../IMAGES/red_sofa_chair.png" alt="" height="200" width="200"> -->
+                                                                    <img src="../IMAGES/blue_sofa_chair.png" alt="" height="170"
+                                                                        width="170" style="margin-left: 15px; margin-top: 15px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- colors -->
+                                                    <div id="first">
+                                                        <div id="fblue" class="first_sofa_chair  bluesofa"></div>
+                                                        <div id="fgray" class="first_sofa_chair redsofa"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ SECOND SOFA CHAIR ------- -->
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_pink_sofa_chair"
+                                                                            src="../assets/second_pink.glb" auto-rotate
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_yellow_sofa_chair"
+                                                                            src="../assets/sofa_one/scene.gltf" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="second_sofa_chair"
+                                                                            id="second_brown_sofa_chair"
+                                                                            src="../assets/second_red.glb" camera-controls
+                                                                            alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-120deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    back
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="second" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  pinksofa"
+                                                            style="background-color: palevioletred;"></div>
+                                                        <div class="first_sofa_chair yellowsofa"
+                                                            style="background-color: #b1a74d;"></div>
+                                                        <div class="first_sofa_chair brownsofa"
+                                                            style="background-color: brown;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                         <!-- ------ THIRD SOFA CHAIR ------- -->
+        
+        
+                                                                         <model-viewer class="third_sofa_chair"
+                                                                         id="third_lightpink_sofa_chair"
+                                                                         src="../assets/besame_chair_hp.glb" auto-rotate
+                                                                         camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                     <model-viewer class="third_sofa_chair"
+                                                                         id="third_lightblue_sofa_chair"
+                                                                         src="../assets/new_third_lightblue.glb"
+                                                                         camera-controls alt="cube" shadow-intensity="3"
+                                                                         style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                     <model-viewer class="third_sofa_chair"
+                                                                         id="third_peacock_sofa_chair"
+                                                                         src="../assets/new_third_peacock.glb"
+                                                                         camera-controls alt="cube" shadow-intensity="3"
+                                                                         style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                     </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    back
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <!-- colors -->
+                                                    <div id="third" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  lightpinksofa"
+                                                            style="background-color: rgb(245, 137, 173);">
+                                                        </div>
+                                                        <div class="first_sofa_chair lightbluesofa"
+                                                            style="background-color: #19d0dd;"></div>
+                                                        <div class="first_sofa_chair peacocksofa"
+                                                            style="background-color: rgb(1, 117, 133);"></div>
+                                                    </div>
+        
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                       
+                                                                        <!-- ------ FORTH SOFA CHAIR ------- -->
+                                                                        
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_darkpink_sofa_chair"
+                                                                            src="../assets/forth_pink_sofa_chair.glb" auto-rotate
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_grey_sofa_chair"
+                                                                            src="../assets/forth_gray_sofa_chair.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="forth_sofa_chair"
+                                                                            id="forth_green_sofa_chair"
+                                                                            src="../assets/forth_green_sofa_chair.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    back
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="forth" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  darkpinksofa"
+                                                            style="background-color: rgb(255, 3, 104);">
+                                                        </div>
+                                                        <div class="first_sofa_chair grey"
+                                                            style="background-color: #575757;"></div>
+                                                        <div class="first_sofa_chair green"
+                                                            style="background-color: rgb(5, 255, 97);"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="box1 bo1">
+                                                        <div class="cardContainer inactive">
+                                                            <div class="card">
+                                                                <div class="side front">
+                                                                    <div class="info">
+                                                                        <!-- ------ FIFFTH SOFA CHAIR ------- -->
+                                                                        
+                                                                        <model-viewer class="fifth_sofa_chair"
+                                                                            id="fifth_black_sofa_chair"
+                                                                            src="../assets/fifth_black.glb" auto-rotate
+                                                                            camera-controls alt="cube" shadow-intensity="3" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                        <model-viewer class="fifth_sofa_chair"
+                                                                            id="fifth_yello_sofa_chair"
+                                                                            src="../assets/fifth_yellow.glb"
+                                                                            camera-controls alt="cube" shadow-intensity="3"
+                                                                            style="display: none;" disable-tap camera-orbit="-30deg 80deg" disable-zoom>
+                                                                        </model-viewer>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="side back">
+                                                                    back
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="fifth" style="margin-left: 25%;">
+                                                        <div class="first_sofa_chair  black"
+                                                            style="background-color: rgb(0, 0, 0);">
+                                                        </div>
+                                                        <div class="first_sofa_chair yellow"
+                                                            style="background-color: #d3dd19;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <!-- <div class="swiper-pagination"></div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cir1"></div>
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="aboutt" style="display: inline-block; margin-top: -200px;">
+                    <p>About 3DFURNIX</p>
+                    <div class="line"></div>
+                    <p style="font-size:20px; text-align: justify; margin-top: 70px; width: 1700px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis doloribus quidem rem eius recusandae deserunt ipsa officiis unde, asperiores amet sunt illo molestias voluptas itaque? Doloremque quibusdam vitae placeat dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime quos voluptate, doloremque illo odit adipisci. Cum consequuntur molestiae ipsa. Culpa facilis porro consequatur. Excepturi ipsa eos placeat dolor mollitia? Eum!</p>
+                </div>
+                <div class="line2"></div>     
+        </div>
+        
+        <svg width="2012" height="239" viewBox="0 0 1512 239" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0px;">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M-244 224.388L-191.2 213.703C-136.8 203.017 -31.2 181.647 76 186.99C183.2 192.332 288.8 224.388 396 235.073C503.2 245.758 608.8 235.073 716 197.675C823.2 160.277 928.8 96.1662 1036 101.509C1143.2 106.851 1248.8 181.647 1356 186.99C1463.2 192.332 1568.8 128.222 1623.2 96.1662L1676 64.1108V0H1623.2C1568.8 0 1463.2 0 1356 0C1248.8 0 1143.2 0 1036 0C928.8 0 823.2 0 716 0C608.8 0 503.2 0 396 0C288.8 0 183.2 0 76 0C-31.2 0 -136.8 0 -191.2 0H-244V224.388Z" fill="#172336"/>
+        </svg>
+        <footer class="footer-distributed">
+        
+                    <div class="footer-left">
+        
+                        <h2 style="color: white; font-size: 40px;">3DFURNIX</h2>
+        
+                        <p class="footer-links">
+                            <a href="#" class="link-1">Home</a>
+                            
+                            <a href="#">Blog</a>
+                        
+                            <a href="#">Pricing</a>
+                        
+                            <a href="#">About</a>
+                            
+                            <a href="#">Faq</a>
+                            
+                            <a href="#">Contact</a>
+                        </p>
+    
+                    </div>
+        
+                    <div class="footer-center">
+        
+                        <div>
+                            <i class="fa fa-map-marker"></i>
+                            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+                        </div>
+        
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p>+1.555.555.5555</p>
+                        </div>
+        
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p><a href="mailto:support@company.com">support@company.com</a></p>
+                        </div>
+        
+                    </div>
+        
+                    <div class="footer-right">
+        
+                        <p class="footer-company-about">
+                            <span>About the store</span>
+                            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                        </p>
+        
+                        <div class="footer-icons">
+        
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+        
+                        </div>
+        
+                    </div>
+        
+                </footer>
+            
+        
+            
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../JS/landing.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
